@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="script/index.js" defer></script>
+    <title>Home</title>
+</head>
+<body>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">coding</span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                </button>
+            </li>
+            <li class="active">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="dashboard.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M560-320h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
+                    <span>Create</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="#">Folder</a></li>
+                        <li><a href="#">Document</a></li>
+                        <li><a href="#">Project</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"/></svg>
+                    <span>To-Do list</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </button>
+                
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Private</a></li>
+                        <li><a href="#">Coding</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="calendar.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Hello world</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur praesentium esse nihil sequi molestias beatae est fugit, qui ipsa veniam omnis iusto commodi rerum quos nostrum mollitia accusantium error sunt.</p>
+        </div>
+        <div class="container">
+            <h2>Example heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet libero dicta repellendus, dolorum laudantium repudiandae qui consequuntur incidunt veniam dolorem cum quibusdam soluta. Delectus veritatis harum illum quam sunt aliquam?</p>
+        </div>
+        <div class="container">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aliquid minus rem sunt saepe quas, fuga odit possimus sit molestias, facere mollitia alias sequi fugiat aliquam ab! Eveniet, sunt rem.
+            Unde, quaerat voluptates incidunt, soluta magni, excepturi quidem error quisquam ipsam accusamus nostrum architecto eos voluptas optio asperiores distinctio mollitia molestias eveniet praesentium nemo nam sint nulla. Veritatis, veniam doloremque?
+            Impedit quibusdam accusantium dolore nihil voluptate aliquid iste alias explicabo voluptates in optio aperiam neque, dolorum a ad excepturi ex consequuntur labore eveniet? Maxime doloribus laborum autem tempore, vel ullam?
+            Corporis eos, unde quod explicabo, officiis vero ipsam et, consequatur nobis ipsa sequi error? Quos, nostrum. Voluptate, officiis. Similique libero dolorum asperiores debitis facere laudantium optio alias atque inventore necessitatibus.
+            Eligendi voluptatem ullam vero sapiente ad tempore mollitia commodi veniam! Nemo earum nulla culpa assumenda repellat sint laborum vel, suscipit magnam, voluptas ipsum, architecto placeat laboriosam! Cupiditate, tenetur. Molestias, quo?
+            Suscipit magnam blanditiis est molestias possimus autem quidem eveniet repellendus assumenda officiis iure aliquid incidunt, maiores mollitia at iste accusantium ad error placeat minus reiciendis architecto deleniti! Voluptas, temporibus quo!
+            Fugiat blanditiis eveniet in odit, veritatis, deleniti molestiae neque quaerat ex corporis provident minus quibusdam doloribus quisquam suscipit reprehenderit earum, aperiam voluptatibus obcaecati. Inventore temporibus sapiente, neque eum quae rem.
+            Perferendis eveniet, debitis cupiditate laboriosam distinctio at! Magnam dolorem nisi aperiam, voluptatibus expedita eveniet, sequi neque in asperiores quibusdam laudantium. Est vitae alias doloribus esse expedita accusantium sunt, et voluptate!
+            Asperiores cupiditate, iste blanditiis dolorum aliquid qui nemo aspernatur eligendi voluptatum dolore minus veniam temporibus, soluta est, aliquam exercitationem. Voluptatum minus omnis itaque. Dolorum commodi, doloremque ea deleniti dignissimos aut?
+            Veniam eligendi, repellat dolor suscipit placeat assumenda deleniti voluptate quisquam rem beatae facere minus voluptatem omnis a blanditiis praesentium eveniet magnam ducimus nulla fugiat nihil laudantium tempora! Accusamus, dolorum corporis.
+            Cupiditate, ratione quibusdam unde voluptatibus facere maxime quasi esse vel voluptate delectus quisquam eius iusto quam debitis hic quod consectetur, eaque itaque. Minima ducimus dolorum atque officiis, ipsa porro unde.
+            At ipsam eveniet error adipisci nostrum nisi voluptatem iste recusandae. Quos a blanditiis neque nemo tempore maxime iusto ea nobis labore in. Voluptas necessitatibus soluta itaque consectetur, veniam nemo eum.
+            Omnis magni cum sit eveniet! Nihil obcaecati laboriosam at facilis dolores quasi impedit deleniti recusandae. Magni amet sapiente, nostrum dolorem sequi autem consequatur expedita laborum labore laudantium, accusamus natus commodi.
+            Tempora animi nostrum, nam enim iure assumenda quis dignissimos? Consequuntur, laborum. Hic quas ipsam ad minus velit repellat minima ullam maxime aut distinctio! Sequi, numquam dolore praesentium optio quia voluptatum.
+            Labore reprehenderit, saepe rerum enim corrupti explicabo iure exercitationem minus autem mollitia ipsam cupiditate quidem vero excepturi veniam deserunt expedita dolore laboriosam quas modi fugit iste delectus praesentium aliquid. Odit?
+            At dolorem officia numquam ipsam ut debitis. Perferendis, exercitationem autem! Dolor nisi a ab animi aperiam at iusto voluptatibus, numquam cum corrupti ipsa eveniet porro consectetur recusandae. Voluptatibus, repellendus ipsum.
+            Vel quibusdam praesentium atque neque adipisci esse. Voluptate necessitatibus provident nostrum ipsam unde aspernatur at! Quia vero illum et, qui, alias, voluptatum eius nam vitae voluptates corrupti sed autem. Perferendis.
+            Tempore exercitationem, esse eveniet a magni ea facere. Cupiditate ut, architecto, repellendus excepturi veniam amet molestiae quia hic veritatis non totam beatae! Praesentium, cum. Quas voluptatem eum incidunt officiis dolorum.
+            Molestias quibusdam rerum iste unde magni quo sit non assumenda, ipsum distinctio blanditiis corrupti dolores laborum nihil harum animi quas id repellat consectetur quasi! Enim iste deserunt sit similique quod.
+            Nesciunt odio esse labore explicabo? Sapiente deserunt magnam blanditiis odit suscipit cumque. Quaerat suscipit a quia rerum ratione ex dolor id odio, quod, tempore minima repudiandae, ad corporis fugit dolorem?
+            Harum mollitia vitae impedit omnis quibusdam tempore eligendi temporibus est incidunt, aliquam reiciendis enim quaerat maiores doloremque eaque nulla distinctio, eos explicabo tenetur. Adipisci cumque quos voluptatibus officia soluta ut.
+            Possimus aliquid iusto culpa dolore. Neque numquam, quisquam sunt culpa, fuga, ullam molestias optio possimus ab beatae quasi! Molestiae consectetur magni praesentium ad, architecto eius omnis alias eveniet rem modi!
+            Natus ipsum laudantium totam, ea dolores eos ex quaerat omnis sunt vel odio aperiam ullam reprehenderit error adipisci asperiores dolorum accusantium! Doloribus molestias a magni sit voluptates enim facere mollitia.
+            Maxime amet quibusdam exercitationem temporibus in adipisci accusamus quae sequi provident explicabo excepturi consequuntur, facilis labore, assumenda ipsam doloribus architecto. Unde voluptatem incidunt et tenetur at fugit impedit animi delectus.
+            Hic amet sit ex culpa, cum dolore atque officia facere eaque veniam ducimus doloremque nisi, quisquam adipisci consectetur veritatis molestias tempora totam. Eum minima eaque voluptate ipsam obcaecati. Voluptate, illo!
+            Inventore temporibus quasi dolorem molestias maiores enim numquam odit vitae eos earum provident, natus, consectetur accusamus, veritatis non ipsum? Ratione facere veritatis perspiciatis veniam! Officiis unde totam at aut et.
+            Odio hic, at tempora quisquam eius minima earum illum fugit. Ex delectus quisquam quia incidunt velit beatae quis nihil accusamus eligendi. Doloremque perferendis a aut similique ex dicta, pariatur maxime!
+            Hic, reiciendis quis, sint facilis asperiores adipisci pariatur, veritatis aliquid optio error eum labore. Iure odio aspernatur possimus obcaecati placeat. Veniam reprehenderit molestiae neque nostrum odio in omnis architecto officiis.
+            Inventore deserunt accusantium illum. Molestiae, aspernatur corrupti! Earum tempore nihil tempora, reiciendis ipsum veniam molestiae itaque, neque non illo voluptas suscipit, enim dolorem rem error tenetur? At alias beatae rem!
+            Adipisci quas voluptates rem, quos possimus iste, aperiam hic quia, ex dolor aliquam accusamus ipsa natus voluptatum pariatur commodi! Maiores tempora repudiandae necessitatibus impedit autem placeat laborum amet velit aliquam.</p>
+        </div>
+    </main>
+</body>
+</html>
